@@ -2,8 +2,6 @@
   background-color: red;
 }
 
-/* 
-blue가 없어도 테스트가 통과됨
 .blue {
   background-color: blue;
-} */
+}

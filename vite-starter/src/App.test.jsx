@@ -18,5 +18,14 @@ test("버튼 색상,라벨 확인", () => {
   expect(buttonElement).toHaveTextContent(/red/i);
 
   // 버튼 색상 확인
-  expect(buttonElement).toHaveClass("blue");
+  // expect(buttonElement).toHaveClass("blue");
+  expect(buttonElement).toHaveStyle({ "background-color": "rgb(0,0,255)" });
+  /*
+    expect(buttonElement).toHaveStyle({ "background-color": "blue" });
+  Error: expect(element).toHaveStyle()
+- Expected
+- background-color: blue;
++ background-color: rgb(0, 0, 255);
+ ❯ src/App.test.jsx:22:25
+ */
 });
