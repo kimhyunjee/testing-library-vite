@@ -5,22 +5,18 @@ test("버튼 색상,라벨 확인", () => {
   //render app
   render(<App />);
 
-  //find the button
+  // 버튼 요소 찾기
   const buttonElement = screen.getByRole("button", { name: /blue/i });
-  // check initial color
+
+  // 버튼의 색상 확인
   expect(buttonElement).toHaveClass("red");
-});
 
-test("클릭한 버튼 텍스트 확인", () => {
-  //click the button
+  // 버튼 클릭
   fireEvent.click(buttonElement);
-});
-test("버튼 색상 확인", () => {});
-test("버튼 클릭 이후 색상 확인", () => {
-  /red/i;
-});
-//check button text
 
-//  check  the button color
-expect(buttonElement).toHaveClass("blue");
-test("버튼 클릭 이후 텍스트 확인", () => {});
+  //버튼의 text 확인
+  expect(buttonElement).toHaveTextContent(/red/i);
+
+  // 버튼 색상 확인
+  expect(buttonElement).toHaveClass("blue");
+});
