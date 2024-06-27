@@ -28,4 +28,16 @@ test("버튼 색상,라벨 확인", () => {
 + background-color: rgb(0, 0, 255);
  ❯ src/App.test.jsx:22:25
  */
+
+  test("체크박스 테스트", () => {
+    render(<App />);
+
+    // 요소 찾기
+    const buttonElement = screen.getByRole("button", { name: /blue/i });
+    const checkboxElement = screen.getByRole("checkbox", {
+      name: /disable button/i,
+    });
+
+    // 최
+  });
 });

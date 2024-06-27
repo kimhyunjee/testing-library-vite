@@ -10,7 +10,13 @@ function App() {
       <button className={buttonColor} onClick={() => setButtonColor(nextColor)}>
         change to {nextColor}
       </button>
-      <h1>React Testing Library</h1>
+      <br />
+      <labe htmlFor="disable-button-checkbox">Disable button</labe>
+      <input
+        type="checkbox"
+        id="disable-button-checkbox"
+        defaultChecked={false}
+      />
     </div>
   );
 }
