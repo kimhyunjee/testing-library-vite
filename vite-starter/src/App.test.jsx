@@ -38,6 +38,8 @@ test("버튼 색상,라벨 확인", () => {
       name: /disable button/i,
     });
 
-    // 최
+    // 초기 체크
+    expect(buttonElement).toBeEnabled();
+    expect(checkboxElement).not.toBeChecked();
   });
 });
