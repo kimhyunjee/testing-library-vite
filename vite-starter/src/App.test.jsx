@@ -41,5 +41,13 @@ test("버튼 색상,라벨 확인", () => {
     // 초기 체크
     expect(buttonElement).toBeEnabled();
     expect(checkboxElement).not.toBeChecked();
+
+    // 체크박스를 클릭하면 버튼이 비활성화됨
+    fireEvent.click(checkboxElement);
+    expect(buttonElement).toBeDisabled();
+
+    // 체크박스를 다시 클릭하면 버튼이 활성화됨
+    fireEvent.click(checkboxElement);
+    expect(buttonElement).toBeEnabled();
   });
 });
