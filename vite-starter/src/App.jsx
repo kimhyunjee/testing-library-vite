@@ -20,7 +20,7 @@ function App() {
       <input
         type="checkbox"
         id="disable-button-checkbox"
-        defaultChecked={false}
+        defaultChecked={disabled}
         onChange={(e) => setDisabled(e.target.checked)}
       />
     </div>
