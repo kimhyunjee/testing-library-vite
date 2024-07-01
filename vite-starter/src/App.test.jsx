@@ -1,5 +1,6 @@
 import { render, screen, fireEvent } from "@testing-library/react";
 import App from "./App";
+import { kebabCaseToTitleCase } from "./helpers";
 
 test("버튼 색상,라벨 확인", () => {
   //render app
@@ -75,5 +76,17 @@ test("버튼 색상,라벨 확인", () => {
     fireEvent.click(checkboxElement);
     expect(buttonElement).toBeEnabled();
     expect(buttonElement).toHaveClass("blue");
+  });
+});
+
+describe("kebabCaseToTitleCase", () => {
+  test("-이 없을 때", () => {
+    expect(kebabCaseToTitleCase("red")).toBe("Red");
+  });
+  test("-이 1개일 때", () => {
+    expect(kebabCaseToTitleCase("midnight-blue")).toBe("Midnight Blue");
+  });
+  test("-이 여러개일 때", () => {
+    expect(kebabCaseToTitleCase("medium-violet-red")).toBe("Medium Violet Red");
   });
 });
