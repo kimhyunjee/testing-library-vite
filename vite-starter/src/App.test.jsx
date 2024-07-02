@@ -10,7 +10,7 @@ test("버튼 색상,라벨 확인", () => {
   const buttonElement = screen.getByRole("button", { name: /blue/i });
 
   // 버튼의 색상 확인
-  expect(buttonElement).toHaveClass("red");
+  expect(buttonElement).toHaveClass("medium-violet-red");
 
   // 버튼 클릭
   fireEvent.click(buttonElement);
@@ -19,8 +19,8 @@ test("버튼 색상,라벨 확인", () => {
   expect(buttonElement).toHaveTextContent(/red/i);
 
   // 버튼 색상 확인
-  // expect(buttonElement).toHaveClass("blue");
-  expect(buttonElement).toHaveStyle({ "background-color": "rgb(0,0,255)" });
+  expect(buttonElement).toHaveClass("midnight-blue");
+
   /*
     expect(buttonElement).toHaveStyle({ "background-color": "blue" });
   Error: expect(element).toHaveStyle()
@@ -51,7 +51,7 @@ test("버튼 색상,라벨 확인", () => {
     // 체크박스를 다시 클릭하면 버튼이 활성화됨
     fireEvent.click(checkboxElement);
     expect(buttonElement).toBeEnabled();
-    expect(buttonElement).toHaveClass("red");
+    expect(buttonElement).toHaveClass("medium-violet-red");
   });
 
   test("버튼 클릭 후 체크박스 테스트", () => {
@@ -75,7 +75,7 @@ test("버튼 색상,라벨 확인", () => {
     // 체크박스를 다시 눌러서 버튼 활성화
     fireEvent.click(checkboxElement);
     expect(buttonElement).toBeEnabled();
-    expect(buttonElement).toHaveClass("blue");
+    expect(buttonElement).toHaveClass("midnight-blue");
   });
 });
 
