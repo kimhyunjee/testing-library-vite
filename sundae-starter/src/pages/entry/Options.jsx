@@ -1,6 +1,7 @@
 import axios from "axios";
 import { useEffect, useState } from "react";
 import SccoopOption from "./SccoopOption";
+import Row from "react-bootstrap/Row";
 
 export default function Options({ optionType }) {
   const [items, setItems] = useState([]);
@@ -27,5 +28,5 @@ export default function Options({ optionType }) {
     />
   ));
 
-  return <div>{optionItems}</div>;
+  return <Row>{optionItems}</Row>;
 }
