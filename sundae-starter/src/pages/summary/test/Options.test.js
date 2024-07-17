@@ -5,7 +5,7 @@ test("서버에서 반환한 scoop가 종류별로 이미지가 나오는지", a
   render(<Options optionType="scoops" />);
 
   // 이미지 찾기
-  const scoopImages = screen.getAllByRole("img", { name: /scoop$/i });
+  const scoopImages = await screen.findAllRole("img", { name: /scoop$/i });
   expect(scoopImages).toHaveLength(2);
 
   //  alt text 확인
